@@ -48,6 +48,10 @@ console.log(LinkDoVideo)
 
 //-------------------!!!!!!-----------------------------------
 
+function AlternarModal () {
+    modal.classList.toggle("aberto")
+}
+
 //passo 2 - dar um jeito de identificar quando o usuário clicar no botão
 
 
@@ -65,7 +69,10 @@ console.log("clicou no botão veja o trailer");
 //teste para checar se a função esta identificando o click no botão
 
 //Passo 4 - abrir a modal na tela
-modal.classList.add("aberto");
+AlternarModal()
+//modal.classList.add("aberto");
+
+//Pode-se usar o toggle... que verificar a situação e faz o ooposto
 
 //Busca a modal, atribui a função de acessar a classlist dela e adiciona a classlist a função add com o selecotr "aberto"
 
@@ -88,7 +95,8 @@ console.log("Olá, sou o span fechar", botaoFecharModal);
 botaoFecharModal.addEventListener("click", () => {
 
     //O mesmo processo de antes, so que antes de adicinar uma classlist ele remove. No caso o "aberto" é removido.
-    modal.classList.remove("aberto");
+    AlternarModal()
+    //modal.classList.remove("aberto");
     video.setAttribute("src", "")
 
 });
